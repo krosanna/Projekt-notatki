@@ -6,11 +6,12 @@
 
     require_once("debug.php");
 
-    if(!empty($_GET['action'])) {
-        $action = $_GET['action'];
-    } else {
-        $action = null;
-    }
+    $action = $_GET['action'] ?? null;
+    // if(!empty($_GET['action'])) {
+    //     $action = $_GET['action'];
+    // } else {
+    //     $action = null;
+    // }
 
     dump($action);
 
@@ -31,16 +32,28 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="/">Lista notatek</a>
+                    <a href="/projekt-kopia/">Lista notatek</a>
                 </li>
                 <li>
-                    <a href="/?action=create">Nowa notatka</a>
+                    <a href="/projekt-kopia/?action=create">Nowa notatka</a>
                 </li>
             </ul>
         </div>
-        <div>
-            tresc
-        </div>
+    </div>
+
+    <div>
+        <?php 
+            if($action === 'create') : ?>
+                <h3> nowa notatka </h3>
+            <?php else : ?>
+                <h4> lista notatek </h4>
+            <?php endif; ?>
+            // if($action === 'create') :
+            //     echo 'nowa notatka';
+            // else :
+            //     echo 'lista notatek';
+            // endif;
+        ?>
     </div>
     <div class="footer">
 
