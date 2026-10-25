@@ -4,7 +4,8 @@
 
     namespace App;
 
-    require_once("debug.php");
+    require_once("src/debug.php");
+    require_once("src/View.php");
 
     $action = $_GET['action'] ?? null;
     // if(!empty($_GET['action'])) {
@@ -13,10 +14,10 @@
     //     $action = null;
     // }
 
-if ($action === 'create') {
-    include_once("templates/create.php");
-} else {
-    include_once("templates/list.php");
-}
+    $view = new View();
+    $view->render($action);
+    dump($view);
+
+   
    
    
