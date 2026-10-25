@@ -23,7 +23,13 @@
     </div>
 
     <div>
-        .................
+    <?php
+    if ($page === 'create') {
+            include_once("templates/create.php");
+        } else {
+            include_once("templates/list.php");
+        }
+    ?>
     </div>
     <div class="footer">
 
