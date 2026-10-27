@@ -16,7 +16,7 @@
 
     $view = new View();
     $view->render($action);
-    dump($view);
+    
 
    
    
