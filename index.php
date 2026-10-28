@@ -16,6 +16,8 @@
 
     $view = new View();
     $view->render($action);
+    hjwgdwcmjqjdmsc
+    chdwcgkqj
     
 
    
