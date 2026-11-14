@@ -7,7 +7,9 @@
     require_once("src/debug.php");
     require_once("src/View.php");
 
-    $action = $_GET['action'] ?? null;
+    const DEFAULT_ACTION = 'list';
+
+    $action = $_GET['action'] ?? DEFAULT_ACTION;
     // if(!empty($_GET['action'])) {
     //     $action = $_GET['action'];
     // } else {
