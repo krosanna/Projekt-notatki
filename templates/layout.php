@@ -24,8 +24,7 @@
 
     <div>
     <?php
-            var_dump($page);
-            include_once("templates/$page.php");
+            require_once("templates/$page.php");
        
     ?>
     </div>

@@ -10,14 +10,17 @@
     const DEFAULT_ACTION = 'list';
 
     $action = $_GET['action'] ?? DEFAULT_ACTION;
-    // if(!empty($_GET['action'])) {
-    //     $action = $_GET['action'];
-    // } else {
-    //     $action = null;
-    // }
 
     $view = new View();
-    $view->render($action);
+
+    $viewParams = [];
+    if($action === 'create') {
+        $viewParams['resultCreate'] = "udało się";
+    } else {
+        $viewParams['resultList'] = "wyświetlamy notatki";
+    }
+
+    $view->render($action, $viewParams);
     
 
    
